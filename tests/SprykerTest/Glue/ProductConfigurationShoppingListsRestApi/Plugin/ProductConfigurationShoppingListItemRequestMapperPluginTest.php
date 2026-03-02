@@ -42,9 +42,6 @@ class ProductConfigurationShoppingListItemRequestMapperPluginTest extends Unit
      */
     protected ProductConfigurationShoppingListsRestApiPluginTester $tester;
 
-    /**
-     * @return void
-     */
     public function testMapProductConfigurationToRequest(): void
     {
         // Arrange
@@ -75,9 +72,6 @@ class ProductConfigurationShoppingListItemRequestMapperPluginTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testMapWithoutRequiredItem(): void
     {
         // Arrange
@@ -91,9 +85,6 @@ class ProductConfigurationShoppingListItemRequestMapperPluginTest extends Unit
             ->map($restShoppingListItemsAttributesTransfer, new ShoppingListItemRequestTransfer());
     }
 
-    /**
-     * @return void
-     */
     public function testMapExecuteProductConfigurationPriceMapperPluginStack(): void
     {
         // Arrange
@@ -113,9 +104,6 @@ class ProductConfigurationShoppingListItemRequestMapperPluginTest extends Unit
         );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\RestShoppingListItemsAttributesTransfer
-     */
     protected function buildRestShoppingListItemsAttributesTransfer(): RestShoppingListItemsAttributesTransfer
     {
         $price = (new RestProductConfigurationPriceAttributesBuilder([

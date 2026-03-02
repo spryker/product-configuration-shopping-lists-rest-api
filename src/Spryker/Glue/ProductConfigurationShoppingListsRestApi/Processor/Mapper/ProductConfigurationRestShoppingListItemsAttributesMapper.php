@@ -20,20 +20,11 @@ class ProductConfigurationRestShoppingListItemsAttributesMapper implements Produ
      */
     protected ProductConfigurationInstanceMapperInterface $productConfigurationInstanceMapper;
 
-    /**
-     * @param \Spryker\Glue\ProductConfigurationShoppingListsRestApi\Processor\Mapper\ProductConfigurationInstanceMapperInterface $productConfigurationInstanceMapper
-     */
     public function __construct(ProductConfigurationInstanceMapperInterface $productConfigurationInstanceMapper)
     {
         $this->productConfigurationInstanceMapper = $productConfigurationInstanceMapper;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestShoppingListItemsAttributesTransfer $restShoppingListItemsAttributesTransfer
-     * @param \Generated\Shared\Transfer\ShoppingListItemRequestTransfer $shoppingListItemRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShoppingListItemRequestTransfer
-     */
     public function mapRestShoppingListItemsAttributesTransferToShoppingListItemRequestTransfer(
         RestShoppingListItemsAttributesTransfer $restShoppingListItemsAttributesTransfer,
         ShoppingListItemRequestTransfer $shoppingListItemRequestTransfer
@@ -57,12 +48,6 @@ class ProductConfigurationRestShoppingListItemsAttributesMapper implements Produ
         return $shoppingListItemRequestTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShoppingListItemTransfer $shoppingListItemTransfer
-     * @param \Generated\Shared\Transfer\RestShoppingListItemsAttributesTransfer $restShoppingListItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestShoppingListItemsAttributesTransfer
-     */
     public function mapShoppingListItemTransferToRestShoppingListItemsAttributesTransfer(
         ShoppingListItemTransfer $shoppingListItemTransfer,
         RestShoppingListItemsAttributesTransfer $restShoppingListItemsAttributesTransfer

@@ -32,9 +32,6 @@ class ProductConfigurationRestShoppingListItemsAttributesMapperPluginTest extend
      */
     protected ProductConfigurationShoppingListsRestApiPluginTester $tester;
 
-    /**
-     * @return void
-     */
     public function testMapConfigurationToAttributes(): void
     {
         // Arrange
@@ -55,9 +52,6 @@ class ProductConfigurationRestShoppingListItemsAttributesMapperPluginTest extend
         );
     }
 
-    /**
-     * @return void
-     */
     public function testMapExecuteRestProductConfigurationPriceMapperPluginStack(): void
     {
         // Arrange

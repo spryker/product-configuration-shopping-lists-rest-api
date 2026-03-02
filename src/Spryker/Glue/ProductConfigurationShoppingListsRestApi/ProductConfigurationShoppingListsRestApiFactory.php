@@ -17,9 +17,6 @@ use Spryker\Glue\ProductConfigurationShoppingListsRestApi\Processor\Mapper\Produ
 
 class ProductConfigurationShoppingListsRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ProductConfigurationShoppingListsRestApi\Processor\Mapper\ProductConfigurationRestShoppingListItemsAttributesMapperInterface
-     */
     public function createProductConfigurationRestShoppingListItemsAttributesMapper(): ProductConfigurationRestShoppingListItemsAttributesMapperInterface
     {
         return new ProductConfigurationRestShoppingListItemsAttributesMapper(
@@ -27,9 +24,6 @@ class ProductConfigurationShoppingListsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationShoppingListsRestApi\Processor\Mapper\ProductConfigurationInstanceMapperInterface
-     */
     public function createProductConfigurationInstanceMapper(): ProductConfigurationInstanceMapperInterface
     {
         return new ProductConfigurationInstanceMapper(
@@ -39,9 +33,6 @@ class ProductConfigurationShoppingListsRestApiFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductConfigurationShoppingListsRestApi\Processor\Mapper\ProductConfigurationInstancePriceMapperInterface
-     */
     public function createProductConfigurationInstancePriceMapper(): ProductConfigurationInstancePriceMapperInterface
     {
         return new ProductConfigurationInstancePriceMapper();

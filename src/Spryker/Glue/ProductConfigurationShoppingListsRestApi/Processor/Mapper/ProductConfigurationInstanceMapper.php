@@ -43,12 +43,6 @@ class ProductConfigurationInstanceMapper implements ProductConfigurationInstance
         $this->restProductConfigurationPriceMapperPlugins = $restProductConfigurationPriceMapperPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\RestShoppingListItemProductConfigurationInstanceAttributesTransfer $restShoppingListItemProductConfigurationInstanceAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer
-     */
     public function mapRestShoppingListItemProductConfigurationInstanceAttributesToProductConfigurationInstance(
         RestShoppingListItemProductConfigurationInstanceAttributesTransfer $restShoppingListItemProductConfigurationInstanceAttributesTransfer,
         ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
@@ -70,12 +64,6 @@ class ProductConfigurationInstanceMapper implements ProductConfigurationInstance
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
-     * @param \Generated\Shared\Transfer\RestShoppingListItemProductConfigurationInstanceAttributesTransfer $restShoppingListItemProductConfigurationInstanceAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestShoppingListItemProductConfigurationInstanceAttributesTransfer
-     */
     public function mapProductConfigurationInstanceToRestShoppingListItemProductConfigurationInstanceAttributes(
         ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer,
         RestShoppingListItemProductConfigurationInstanceAttributesTransfer $restShoppingListItemProductConfigurationInstanceAttributesTransfer
