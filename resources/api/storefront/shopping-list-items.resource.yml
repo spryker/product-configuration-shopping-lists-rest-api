@@ -4,22 +4,47 @@ resource:
 
     properties:
         productConfigurationInstance:
-            type: mixed
+            type: object
+            objectName: ProductConfigurationInstance
             writable: true
             readable: true
             description: 'Product configuration instance data'
-            openapiContext:
-                example:
-                    displayData: '{"some_key":"some_value"}'
-                    configuration: '{"some_key":"some_value"}'
-                    configuratorKey: 'DATE_TIME_CONFIGURATOR'
-                    isComplete: true
-                    availableQuantity: 5
-                    prices:
-                        - priceTypeName: 'DEFAULT'
-                          netAmount: 10000
-                          grossAmount: 12000
-                          currency:
-                              code: 'EUR'
-                              name: 'Euro'
-                              symbol: '€'
+            properties:
+                displayData:
+                    type: string
+                    description: 'Human-readable configuration display data (JSON-encoded string).'
+                    openapiContext:
+                        example: '{"some_key":"some_value"}'
+                configuration:
+                    type: string
+                    description: 'Raw product configuration payload (JSON-encoded string).'
+                    openapiContext:
+                        example: '{"some_key":"some_value"}'
+                configuratorKey:
+                    type: string
+                    description: 'Identifier of the configurator that produced the instance.'
+                    openapiContext:
+                        example: 'DATE_TIME_CONFIGURATOR'
+                isComplete:
+                    type: boolean
+                    description: 'Whether the configuration is complete.'
+                    openapiContext:
+                        example: true
+                availableQuantity:
+                    type: integer
+                    description: 'Available quantity for the configured product.'
+                    openapiContext:
+                        example: 5
+                prices:
+                    type: array
+                    description: 'Prices for the configured product instance.'
+                    openapiContext:
+                        example:
+                            [
+                                {
+                                    priceTypeName: 'DEFAULT',
+                                    netAmount: 10000,
+                                    grossAmount: 12000,
+                                    currency: { code: 'EUR', name: 'Euro', symbol: '€' },
+                                },
+                            ]
